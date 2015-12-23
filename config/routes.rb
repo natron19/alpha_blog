@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resources :categories, except: [:destroy]
+
 
   get 'signup', to: 'users#new'
   #post 'users', to: 'users#create'
